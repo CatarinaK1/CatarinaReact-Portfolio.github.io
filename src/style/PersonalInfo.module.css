@@ -1,0 +1,45 @@
+.cardBody {
+    background-color: black;
+  }
+  
+  .full-height {
+    height: 100%; /* Set the height to 100% */
+  }
+  
+  .shadow-effect {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  }
+  
+
+
+
+.cardTitle{
+    font-size: 18px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    color: #ffffff;
+}
+
+.cardText{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the gap value as needed */
+    line-height: 40px; /* Adjust the line height value as needed */
+    color: #ffffff;
+}
+
+.cardText h2{
+    font-size: 64px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid  rgb(218, 182, 252);
+
+}
+.socialButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the gap value as needed */
+}
