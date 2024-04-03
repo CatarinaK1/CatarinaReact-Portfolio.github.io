@@ -1,11 +1,14 @@
 import React from 'react';
+import ProjectCSS from '../style/projects.module.css';
 import Lavendear from '../assets/Lavendear.png';
 import Contact from '../assets/Contact.png';
+import Data from '../assets/Data.png';
+import { FaGithub } from 'react-icons/fa'; // Importing Bootstrap icons
 
 const Projects = () => {
   // Example educational background data
   // objects
-  const educations = [
+  const Projects = [
     {
       id: 1,
       name: 'Café Website Project - HAMK',
@@ -18,24 +21,24 @@ const Projects = () => {
     },
     {
         id: 2,
-        name: 'Café Website Project - HAMK',
-        image:'',
-        skill: 'HTML, CSS',
+        name: 'Data Processing with Python - HAMK',
+        image: Data,
+        skill: 'Python, Data Analysis',
         description:
-          'Collaborated in a team to design and implement a website for a fictional café, demonstrating my practical skills in web development. ',
+          'Utilized Python to analyze and present data findings from a workplace satisfaction survey.  Showcasing my ability to create data visualizations.',
           repository:
-          'https://github.com/makzibs/CatffeeWebsiteAssignment'
+          'https://github.com/CatarinaK1/Data-Processing-with-Python'
       },
 
     {
         id: 3,
-        name: 'Café Website Project - HAMK',
+        name: 'Flower Shop Website Project - HAMK',
         image: Lavendear,
-        skill: 'HTML, CSS',
+        skill: 'HTML, CSS, CMS, Wordpress',
         description:
-          'Collaborated in a team to design and implement a website for a fictional café, demonstrating my practical skills in web development. ',
+          'Used a Wordpress and custom elements to develop a website for a flower shop',
         repository:
-          'https://github.com/makzibs/CatffeeWebsiteAssignment'
+          ''
       },
 
   ];
@@ -46,18 +49,24 @@ const Projects = () => {
       <div className="row">
 
         {/* iterate through the objects, they are treated as an array of objects */}
-        {educations.map((education) => (
-          <div className="col-md-6 col-lg-4 mb-4" key={education.id} style={{ height: '650px' }}>
+        {Projects.map((Project) => (
+          <div className="col-md-6 col-lg-4 mb-4" key={Project.id} style={{ height: '650px' }}>
             <div className="card h-100 shadow">
-            <img src={education.image} className="card-img-top" alt="Education"  style={{ height: '100%' }} />
+            <img src={Project.image} className="card-img-top" alt="Project Image"  style={{ height: '100%' }} />
               <div className="card-header">
-                <h5 className="card-title mb-0">{education.name}</h5>
+                <h5 className="card-title mb-0">{Project.name}</h5>
               </div>
               <div className="card-body">
                 <h6 className="card-subtitle mb-2 text-muted">
-                  {education.skill}
+                  {Project.skill}
                 </h6>
-                <p className="card-text">{education.description}</p>
+                <p className="card-text">{Project.description}</p>
+                <div className="d-flex justify-content-center">
+
+                <a href="https://github.com/CatarinaK1" target="_blank" rel="noopener noreferrer" className={`btn btn-dark ${ProjectCSS.socialButton}`}>
+                  <FaGithub /> GitHub
+                </a>
+              </div>
               </div>
 
             </div>
